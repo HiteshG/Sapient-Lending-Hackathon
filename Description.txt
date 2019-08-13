@@ -1,0 +1,104 @@
+Financing the un-financed (Social financial lending)
+Financing or loans are essential for any community, today Banks are desperate to provide loans to individuals having good tracking financial/credit history. But many people are not part of this system, they don't have trackable financial history and thus Banks are reluctant to offer loans to them. And these people are often exploited by local untrustworthy lenders
+
+Idea at Sapient AI hub is to predict borrowers' repayment capability by using other easily available dataset like telco and transactional information.
+
+This challenge is to predict loan pay-ability using various statistical and machine learning methods
+
+Data is broken into two files for training (with TARGET) and testing (without TARGET).
+
+Static data for all applications. One row represents one loan in data sample.
+
+Data Set Download Data Set
+File Name	Description	Format	Size
+application_train.csv	Train Data Set	csv	
+sample_submission.csv	Sample Submission	csv	
+application_test.csv	Test Data Set	csv	
+Data Dictionary
+Here's a brief version of what you'll find in the data description file.
+
+Variable	Description
+SK_ID_CURR	applicant_id
+TARGET	probability of applicant paying back
+Submission
+Data pre-processing:
+
+data in application_train.csv may also be corrupt (some of mandatory fields are missing), filter out those records
+Since this data was collected from multiple sources hence it may contain duplicate records, please clean up duplicate records.
+
+Designing and Architectural considerations:
+
+Propose an end to end design from collecting uses' data to processing and the finally accessing output in real time fashion.
+This application is expected to process huge number of applications in real time, hence think about scalability.
+This application is also backbone of entire loan process, hence it's very important to keep it up all time and think about fault-tolerance.
+
+Expected output/submission:
+
+You have to predict weather a borrower's is capable of paying loan back. Your code should generate output with 2 columns – applicant_id and probability of applicant paying back.
+SK_ID_CURR
+
+TARGET
+
+100001
+
+0.5
+
+100005
+
+0.5
+
+100013
+
+0.5
+
+100028
+
+0.5
+
+100038
+
+0.5
+
+100042
+
+0.5
+
+100057
+
+0.5
+
+100065
+
+0.5
+
+100066
+
+0.5
+
+100067
+
+0.5
+
+100074
+
+0.5
+
+100090
+
+0.5
+
+100091
+
+0.5
+
+Complete solution 
+This should contain the following:
+A source file containing bug-free code
+An architectural diagram proposing end to end solution
+PDF file containing - EDA
+
+Evaluation Metric
+Your output file will be evaluated on area under the ROC curve between the predicted probability and the observed target [45 % weightage]
+20 % marks will be awarded on code quality
+30 % marks will be awarded for feature engineering and EDA
+5% bonus marks will be awarded if problem is solved using any big data technology (like pyspark)
